@@ -5,6 +5,7 @@ import { NewPageComponent } from './pages/new-page/new-page.component';
 import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
+import { HeroPageComponent } from './pages/hero-page/hero-page.component';
 
 
 //routes hijas funcionan tal que si alguien entra a ruta padre mas ruta hija se eejecute
@@ -18,7 +19,7 @@ const routes: Routes = [
       { path: 'search', component: SearchPageComponent },
       { path: 'edit/:id', component: NewPageComponent },
       { path: 'list', component: ListPageComponent },
-      { path: ':id', component: ListPageComponent },
+      { path: ':id', component: HeroPageComponent },
       { path: '**', redirectTo:'list' }
 
     ]

@@ -1,0 +1,23 @@
+import { CommonModule } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Hero } from '../../interfaces/hero.interface';
+import { RouterModule } from '@angular/router';
+
+
+@Component({
+  selector: 'heroes-hero-card',
+  standalone: false,
+  templateUrl: './card.component.html',
+  styles: [],
+})
+export class CardComponent implements OnInit {
+  @Input()
+  public hero!:Hero;
+  
+  
+  ngOnInit(): void {
+    if(!this.hero) throw new Error('Hero property is required')
+  }
+
+
+ }
